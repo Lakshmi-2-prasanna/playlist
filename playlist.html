@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>My Music Playlist</title>
-  <style>
+    <style>
     body {
       font-family: Arial, sans-serif;
       background: #121212;
@@ -80,8 +80,31 @@
     audio {
       display: none;
     }
+    .like-wrapper {
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.like-checkbox {
+  display: none;
+}
+
+.heart-icon::before {
+  content: "♡";
+  font-size: 20px;
+  color: #aaa;
+  transition: color 0.3s;
+}
+
+.like-checkbox:checked + .heart-icon::before {
+  content: "❤️";
+  color: #1db954;
+}
   </style>
+
 </head>
+
 <body>
 
   <h1>🎧 My Music Playlist</h1>
