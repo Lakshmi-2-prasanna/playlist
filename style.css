@@ -1,0 +1,139 @@
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('images/background.jpg') ;
+     background-size: cover;        /* Cover entire screen */
+     background-repeat: no-repeat;  /* Don't repeat image */
+     background-position: center;   /* Center the image */
+        margin: 0;
+        padding: 20px;
+            color: white;                  /* Ensure text is readable */
+     
+    }
+    h1 {
+      text-align: center;
+      color: #1db954;
+    }
+
+    .playlist {
+  display: flex;
+  flex-wrap: wrap;        /* Allows wrapping to next line */
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+/* Ensure song-card width fits 6 per row on large screens */
+.song-card {
+  flex: 1 1 calc(16.66% - 40px); /* 100% / 6 = 16.66% per card */
+  max-width: 200px;             /* Optional: control max width */
+  background: #1e1e1e;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+    .song-card:hover {
+      transform: scale(1.05) rotate(1deg);
+      box-shadow: 0 0 15px #1db954, 0 0 30px #1db954;
+    }
+
+    .album-art {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .song-title {
+      margin: 10px 0 5px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .artist {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .controls {
+      margin-top: 10px;
+    }
+
+    .play-btn, .pause-btn {
+      margin: 5px;
+      padding: 5px 12px;
+      background: #1db954;
+      border: none;
+      border-radius: 20px;
+      color: white;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .play-btn:hover, .pause-btn:hover {
+      background: #25e065;
+    }
+
+    audio {
+      display: none;
+    }
+
+
+.like-wrapper {
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.like-checkbox {
+  display: none;
+}
+
+.heart-icon::before {
+  content: "♡";
+  font-size: 18px;
+  color: #aaa;
+  transition: color 0.3s;
+}
+
+.like-checkbox:checked + .heart-icon::before {
+  content: "❤️";
+  color: #1db954;
+}
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.filter-buttons button {
+  margin: 10px;
+  padding: 12px 25px;
+  background: #1db954;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 4px 12px rgba(29, 185, 84, 0.3);
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.filter-buttons button:hover {
+  background: #25e065;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(37, 224, 101, 0.4);
+}
+
+.filter-buttons button:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 8px rgba(29, 185, 84, 0.2);
+}
+
+</style>
+/* Responsive fallback: stack fewer cards on smaller screens */
