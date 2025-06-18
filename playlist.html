@@ -3,84 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>My Music Playlist</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #121212;
-      color: #fff;
-      margin: 0;
-      padding: 20px;
-    }
-
-    h1 {
-      text-align: center;
-      color: #1db954;
-    }
-
-    .playlist {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin-top: 30px;
-    }
-
-    .song-card {
-      background: #1e1e1e;
-      border-radius: 10px;
-      width: 200px;
-      padding: 15px;
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      position: relative;
-    }
-
-    .song-card:hover {
-      transform: scale(1.05) rotate(1deg);
-      box-shadow: 0 0 15px #1db954, 0 0 30px #1db954;
-    }
-
-    .album-art {
-      width: 100%;
-      border-radius: 8px;
-    }
-
-    .song-title {
-      margin: 10px 0 5px;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    .artist {
-      color: #aaa;
-      font-size: 14px;
-    }
-
-    .controls {
-      margin-top: 10px;
-    }
-
-    .play-btn, .pause-btn {
-      margin: 5px;
-      padding: 5px 12px;
-      background: #1db954;
-      border: none;
-      border-radius: 20px;
-      color: white;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .play-btn:hover, .pause-btn:hover {
-      background: #25e065;
-    }
-
-    audio {
-      display: none;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -89,12 +12,13 @@
   <div class="playlist">
     <!-- Song 1 -->
     <div class="song-card">
-      <img src="images/sanamterikasam.png"" class="album-art" alt="Album 1">
+      <img src="images/sanamterikasam.png" class="album-art" alt="Album 1">
     <div class="song-title">Tera chehra</div>
       <div class="artist">Himesh Reshammiya,Arijit Singh</div>
+        
       <div class="controls">
         <audio id="audio1">
-          <source src="songs/Tera Chehra-320kbps.mp3" type="audio/mp4">
+          <source src="songs/Tera Chehra-320kbps.mp3" type="audio/mp3">
           </audio>
         <button class="play-btn" onclick="document.getElementById('audio1').play()">Play ▶</button>
         <button class="pause-btn" onclick="document.getElementById('audio1').pause()">Pause ⏸</button>
@@ -103,12 +27,13 @@
 
     <!-- Song 2 -->
     <div class="song-card">
-     <img src="images/mahanati.png" class="album-art" alt="Album 2">
+     <img src="images/mooga-manasulu.png" class="album-art" alt="Album 2">
       <div class="song-title">Mooga Manasulu</div>
       <div class="artist">shreya Goshal</div>
+     
       <div class="controls">
         <audio id="audio2">
-           <source src="songs/mooga-manasulu.mp3" type="audio/mp4">
+           <source src="songs/mooga-manasulu.mp3" type="audio/mp3">
           </audio>
         <button class="play-btn" onclick="document.getElementById('audio2').play()">Play ▶</button>
         <button class="pause-btn" onclick="document.getElementById('audio2').pause()">Pause ⏸</button>
@@ -120,9 +45,10 @@
        <img src="images/tera aashiq.png" class="album-art" alt="Album 3">
      <div class="song-title">aashiq tera mera</div>
       <div class="artist">Sohail sen,Altamash Faridi</div>
+     
       <div class="controls">
         <audio id="audio3">
-           <source src="C:/Users/lakshmi prasanna/Downloads/WhatsApp Audio 2025-06-16 at 22.04.22.mp4"type="audio/mp4">
+           <source src="songs/aashiq" type="audio/mp3">
          </audio>
         <button class="play-btn" onclick="document.getElementById('audio3').play()">Play ▶</button>
         <button class="pause-btn" onclick="document.getElementById('audio3').pause()">Pause ⏸</button>
@@ -134,9 +60,13 @@
       <img src="images/surya.png" class="album-art" alt="Album 4">
       <div class="song-title">Naaloney Pongaynu</div>
       <div class="artist">VV prassanna,Harris</div>
+      <label class="like-wrapper">
+            <input type="checkbox" class="like-checkbox">
+             <span class="heart-icon"></span>
+        </label>
       <div class="controls">
         <audio id="audio4">
-          <source src="songs/naaloney ponganu.mp3" type="audio/mp4">
+          <source src="songs/naaloney ponganu.mp3" type="audio/mp3">
         </audio>
         <button class="play-btn" onclick="document.getElementById('audio4').play()">Play ▶</button>
         <button class="pause-btn" onclick="document.getElementById('audio4').pause()">Pause ⏸</button>
@@ -148,9 +78,13 @@
       <img src="images/bediya.png" class="album-art" alt="Album 5">
       <div class="song-title">Apna bana le</div>
       <div class="artist">Arijit Singh</div>
+      <label class="like-wrapper">
+            <input type="checkbox" class="like-checkbox">
+             <span class="heart-icon"></span>
+        </label>
       <div class="controls">
         <audio id="audio5">
-          <source src="songs/apna-bana-le.mp3" type="audio/mp4">
+          <source src="songs/apna-bana-le.mp3" type="audio/mp3">
         </audio>
         <button class="play-btn" onclick="document.getElementById('audio5').play()">Play ▶</button>
         <button class="pause-btn" onclick="document.getElementById('audio5').pause()">Pause ⏸</button>
@@ -162,9 +96,13 @@
       <img src="images/orange.png" class="album-art" alt="Album 6">
       <div class="song-title">Chilipiga</div>
       <div class="artist">Karthik</div>
+      <label class="like-wrapper">
+            <input type="checkbox" class="like-checkbox">
+             <span class="heart-icon"></span>
+        </label>
       <div class="controls">
         <audio id="audio6">
-          <source src="songs/chilipiga.mp3" type="audio/mp4">
+          <source src="songs/chilipiga.mp3" type="audio/mp3">
         </audio>
         <button class="play-btn" onclick="document.getElementById('audio6').play()">Play ▶</button>
         <button class="pause-btn" onclick="document.getElementById('audio6').pause()">Pause ⏸</button>
@@ -175,9 +113,13 @@
       <img src="images/atrangire.png" class="album-art" alt="Album 6">
       <div class="song-title">Rait zar si</div>
       <div class="artist">Arijit Singh</div>
+      <label class="like-wrapper">
+            <input type="checkbox" class="like-checkbox">
+             <span class="heart-icon"></span>
+        </label>
       <div class="controls">
         <audio id="audio7">
-          <source src="songs/rait-zara-si.mp3" type="audio/mp4">
+          <source src="songs/rait-zara-si.mp3" type="audio/mp3">
         </audio>
         <button class="play-btn" onclick="document.getElementById('audio7').play()">Play ▶</button>
         <button class="pause-btn" onclick="document.getElementById('audio7').pause()">Pause ⏸</button>
@@ -189,9 +131,13 @@
      <img src="images/premikudu.png" class="album-art" alt="Album 3">
       <div class="song-title">O cheliya</div>
       <div class="artist">Unnikrishnan</div>
+      <label class="like-wrapper">
+            <input type="checkbox" class="like-checkbox">
+             <span class="heart-icon"></span>
+        </label>
       <div class="controls">
         <audio id="audio8">
-          <source src="songs/o-cheliya.mp3"type="audio/mp4">
+          <source src="songs/o-cheliya.mp3"type="audio/mp3">
          </audio>
         <button class="play-btn" onclick="document.getElementById('audio8').play()">Play ▶</button>
         <button class="pause-btn" onclick="document.getElementById('audio8').pause()">Pause ⏸</button>
@@ -203,9 +149,13 @@
       <img src="images/tamasha.png"class="album-art" alt="Album 6">
       <div class="song-title">Agar tum sath ho</div>
       <div class="artist">Arijit Singh</div>
+      <label class="like-wrapper">
+            <input type="checkbox" class="like-checkbox">
+             <span class="heart-icon"></span>
+        </label>
       <div class="controls">
         <audio id="audio9">
-          <source src="songs/agar-tum-sath-ho.mp3" type="audio/mp4">
+          <source src="songs/agar-tum-sath-ho.mp3" type="audio/mp3">
         </audio>
         <button class="play-btn" onclick="document.getElementById('audio9').play()">Play ▶</button>
         <button class="pause-btn" onclick="document.getElementById('audio9').pause()">Pause ⏸</button>
@@ -216,9 +166,13 @@
       <img src="images/ombhembush.png" class="album-art" alt="Album 6">
       <div class="song-title">Anuvanuvu</div>
       <div class="artist">Arijit Singh</div>
+      <label class="like-wrapper">
+            <input type="checkbox" class="like-checkbox">
+             <span class="heart-icon"></span>
+        </label>
       <div class="controls">
         <audio id="audio10">
-          <source src="songs/anuvanuvu.mp3" type="audio/mp4">
+          <source src="songs/anuvanuvu.mp3" type="audio/mp3">
         </audio>
         <button class="play-btn" onclick="document.getElementById('audio10').play()">Play ▶</button>
         <button class="pause-btn" onclick="document.getElementById('audio10').pause()">Pause ⏸</button>
@@ -229,9 +183,13 @@
       <img src="images/old.png" class="album-art" alt="Album 6">
       <div class="song-title">Lag Ja</div>
       <div class="artist">Sanam</div>
+      <label class="like-wrapper">
+            <input type="checkbox" class="like-checkbox">
+             <span class="heart-icon"></span>
+        </label>
       <div class="controls">
         <audio id="audio11">
-          <source src="songs/lag-ja.mp3" type="audio/mp4">
+          <source src="songs/lag-ja.mp3" type="audio/mp3">
         </audio>
         <button class="play-btn" onclick="document.getElementById('audio11').play()">Play ▶</button>
         <button class="pause-btn" onclick="document.getElementById('audio11').pause()">Pause ⏸</button>
@@ -242,9 +200,13 @@
       <img src="images/sam.png" class="album-art" alt="Album 6">
       <div class="song-title">Ye Manishike Majiliyo</div>
       <div class="artist">Chinmayi Sripada</div>
+      <label class="like-wrapper">
+            <input type="checkbox" class="like-checkbox">
+             <span class="heart-icon"></span>
+        </label>
       <div class="controls">
        <audio id="audio12">
-          <source src="songs/majili.mp3" type="audio/mp4">
+          <source src="songs/majili.mp3" type="audio/mp3">
         </audio>
 
         <button class="play-btn" onclick="document.getElementById('audio12').play()">Play ▶</button>
