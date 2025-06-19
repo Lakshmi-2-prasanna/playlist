@@ -26,6 +26,7 @@ function filterSongs(language) {
   });
 }
 
+
 // Optional: show all songs by default on page load
 document.addEventListener("DOMContentLoaded", () => {
   filterSongs('all');
