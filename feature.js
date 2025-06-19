@@ -30,4 +30,3 @@ function filterSongs(language) {
 document.addEventListener("DOMContentLoaded", () => {
   filterSongs('all');
 });
-fdshfhoNFKEjfijefpmakfhiohfkoandiohjcsakohioejfkajo
